@@ -9,6 +9,7 @@
   "author": "mangodm-web",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.5",
     "jest": "^29.6.1"
   }
 }
