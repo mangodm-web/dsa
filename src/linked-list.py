@@ -59,7 +59,31 @@ class LinkedList:
             self.head = new_node
         self.length += 1
 
-    # TODO: pop_first, get, set, insert, remove, reverse
+    def pop_first(self):
+        if self.head is None:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.length -= 1
+
+        return temp
+
+    def get(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        temp = self.head
+        for _ in range(index):
+            temp = temp.next
+        return temp
+
+    def set(self, index, value):
+        temp = self.get(index)
+
+        if temp:
+            temp.value = value
+
+    # TODO: insert, remove, reverse
 
 
 my_linked_list = LinkedList(4)
